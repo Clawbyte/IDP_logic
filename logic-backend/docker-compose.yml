@@ -1,0 +1,25 @@
+services:
+  logic-backend:
+    image: logic-backend:latest
+    ports:
+      - "3002:3002"
+    environment:
+      - AUTH_URL=http://auth-backend:3001
+      - IO_URL=http://io-backend:3000
+    networks:
+      - app-network
+      - kong-net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          memory: 1g
+          cpus: "1"
+
+networks:
+  app-network:
+    external: true
+  kong-net:
+    external: true

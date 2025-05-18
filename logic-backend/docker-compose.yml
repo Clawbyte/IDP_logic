@@ -1,6 +1,6 @@
 services:
   logic-backend:
-    image: logic-backend:latest
+    image: clawbyte/logic-backend:latest
     ports:
       - "3002:3002"
     environment:

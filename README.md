@@ -9,7 +9,7 @@ IDP project: microservice for business logic
 * Running the server locally will not work, always run through docker
 
 ## Functionality
-* Implemented all the logic of the application
+* Implemented all the logic of the application.
 
 ## Technologies
 Express, Typescript, MongoDB, MongoDB Compass, Docker, Docker Compose, Docker Swarm
